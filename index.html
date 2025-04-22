@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>Document</title>
+    
+</head>
+
+<style>
+            *{
+            overflow-x: hidden;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        body{margin: 0px; padding: 0px;
+            overflow-x: hidden;
+        }
+        .main{
+            width: 100%;
+            background-color: white;
+            position: relative;
+        }
+        .con{
+            background-color: white;
+            width: 95%;
+            margin: auto;
+            padding: 10px 0 10px 0;
+        }
+        .logo{
+            color: rgb(238, 162, 10);
+            font-size: 25px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(245, 167, 59, 0.978);
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            padding: 20px 0 20px 0;
+        }
+        .navbar {
+            display: flex;
+            gap: 40px;
+        }
+        .navbar a{
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+            position: relative;
+            transition: bottom 0.3s, color 0.3s;
+        }
+            .navbar a:hover {
+            color: rgb(241, 93, 7); 
+            }
+       .fa-solid{
+         /* padding-top: 8px; */
+         font-size: 30px;
+         text-align: center;
+         align-items: center;
+        float: right;
+        padding: 0 10px 0 0;
+        cursor: pointer;
+       }
+       .fa-bars{
+            font-size: 30px;
+            padding: 3px 10px 0 0 ;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+        } 
+        div.nav_menu
+        {
+            right: 2vw;
+        }
+        @media(max-width:1150px){
+       .fa-bars{
+            display: block;
+            cursor: pointer;
+            color: black;
+            font-size: 30px;
+            padding: 0 50px 0 0 ;
+        }
+       
+        .navbar a{
+            display: block;
+            
+        }
+        
+        .navbar{
+            position: absolute;
+            width: 96vw;
+            right: -96vw;
+            border-radius: 10px;
+            gap: 40px;
+            top: 90px;
+            padding: 10px 0 10px 0;
+            background-color: white;
+            transition: .4s all  ease-in-out;
+            flex-direction: column;
+        }
+        }
+        @media(max-width:520px){
+        
+       .fa-solid{
+         font-size: 24px;
+       }
+       .fa-bars{
+           padding: 0 0 0 0 ;
+       }
+       .navbar {
+            display: flex;
+            gap: 50px;
+        }
+        }
+        @media(max-width:450px){
+       .navbar {
+            display: flex;
+            gap: 30px;
+        }
+        .fa-bars{
+            padding: 0 20px 0 0 ;
+        }
+        }
+        
+        .imge {
+            background-image: url('../images/mango7.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+          
+        }
+        
+        .mango_title{
+            margin: auto;
+            text-align: center;
+            padding: 420px 0px 40px 0px;
+            color: white;
+        }
+        .mango_title h1{
+            font-size: 40px;
+        }
+        .biscit{
+            width: 100%;
+            margin-top: 5px;
+            background-color: salmon;
+            /* background-color:rgb(246,185,157); */
+        }
+        .b_title{
+            width: 20%;
+            margin: auto;
+            text-align: center;
+            color: white;
+            font-size: 20px Arial ;
+            font-family: Arial, sans-serif;
+            padding: 30px 0px 5px 0px;
+        }
+        .blank{
+            width: 15%;
+            height: 2px;
+            background-color: white;
+            margin: auto;
+        }
+        .title_b{
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            line-height: 50px;
+        }
+        #btn{
+            width: 20%;
+            background-color: transparent;
+            /* color: rgb(205, 38, 83); */
+            text-decoration: none;
+            font-size: 22px;
+            border: none;
+            text-align: center;
+            padding: 0px 0 50px 0;
+
+        }
+        #btn a{
+           color: rgb(205, 38, 83);
+        }
+        @media(max-width:1135px){
+            .b_title{
+                width: 40%;
+            }   
+            #btn{
+                width: 60%;}
+        }
+        @media(max-width:650px){
+            .b_title{
+                width: 60%;
+            }
+        }
+        @media(max-width:450px){
+            .b_title{
+                width: 80%;
+            }
+        }
+        .main_bis{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        }
+        .bis_one{
+            width: 50%;
+            display: flex;
+            /* background-color: red; */
+            justify-content: space-around;
+            
+        }
+        #ho:hover{
+        width: 90%;
+        }
+        #imge:hover{
+            width: 400px;
+            padding-right: 20px;
+        }
+      
+        #hover{
+            animation: pop 4.7s infinite linear;
+            animation-iteration-count:infinite;
+            border: 3px dashed transparent;
+            border: 3px dashed rgb(0, 0, 0) transparent;
+           
+        }
+        @keyframes pop{
+            
+            from{
+                transform: rotate(0deg);
+            }
+            to
+            {background-color:transparent;transform: rotate(360deg);
+        }
+    }
+         #img_samosa:hover{
+            padding-top: 20px;
+        }
+        .pista_biscuit, .jam_biscuit{
+            text-align: center;
+            color: white;
+        }
+        .bis_two{
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .almond_biscuit, .zeera_biscuit{
+            text-align: center;
+            color: white;
+        }
+        @media(max-width:905px){
+            .main_bis{
+                
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+            }
+            .bis_one{
+                width: 90%;
+                margin: auto;
+            }
+            .bis_two{
+                width: 90%;
+                margin: auto;
+            }
+        }
+        @media(max-width:550px){
+            
+            .bis_one{
+                display: flex;
+                flex-direction: column;
+            }
+            .bis_two{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .main_braed{
+            width: 100%;
+            /* background-color: rgb(244, 109, 154); */
+            background-color: rgb(246, 185, 157);
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5px;
+            color: rgb(165, 7, 7);
+            /* color: rgb(167, 85, 45); */
+        }
+        .bread_con{
+            width: 98%;
+            /* background-color: green; */
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        }
+        .bra_tit,.braed_img{
+            width: 30%;
+            text-align: center;
+            padding: 190px 0 130px 0;
+        }
+        .braed_img{
+            padding: 190px 0px 130px 0px;
+        }
+        .bra_tit h2{
+            font-size: 40px;
+        }
+        .bra_tit h3{
+            font-size: 27px;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+        }
+        .blank_to{
+            width: 50%;
+            height: 2px;
+            background-color: white;
+            margin: auto;
+        }
+        #btn_to{
+            width: 40%;
+            background-color: transparent;
+            /* color: rgb(205, 38, 83); */
+            text-decoration: none;
+            font-size: 22px;
+            border: none;
+            text-align: center;
+            padding: 0px 0 50px 0;
+        }
+        #btn_to a{
+           color: rgb(205, 38, 83);
+        }
+        .img{
+            padding: 300px 0px 50px 0px ;
+        }
+
+        @media(max-width:1050px){
+            .bread_con{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: auto;
+                gap: -50px;
+            }
+            .bra_tit h2{
+                font-size: 60px;
+            }
+            .bra_tit{
+                width: 100%;
+            }
+            .blank_to{
+                width: 90%;
+                height: 2px;
+                background-color: white;
+                margin: auto;
+            }
+            .braed_img{
+                width: 90%;
+               padding: 40px 0 90px 0 ;
+            }
+            #imge{
+                width: 350px;
+            }
+            #btn_to{
+                width: 80%;
+            }
+            .bra_tit h3{
+                width: 100%;
+                text-align: center;
+               
+            }
+        }
+        .main_dunt{
+            width: 100%;
+            /* background-color: rgb(244, 109, 154); */
+            background-color: rgb(246, 185, 157);
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5px;
+            color: rgb(165, 7, 7);
+            /* color: rgb(167, 85, 45); */
+        }
+        .dunt_con{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            padding: 220px 0 100px  0;
+            text-align: center;
+        }
+        .img_dunt_two{
+            /* width: 500%; */
+        }
+        #img{
+            width: 300px;
+        }
+        #imgee{
+            width: 300px;
+        }
+        .dunt_title h2{
+            font-size: 40px;
+        }
+        .blank_dunt{
+            width: 30vw;
+            height: 2px;
+            background-color: white;
+            margin: auto;
+        }
+        #btn_three{
+            width: 40%;
+            background-color: transparent;
+            /* color: rgb(205, 38, 83); */
+            text-decoration: none;
+            font-size: 22px;
+            border: none;
+            text-align: center;
+            padding: 0px 0 50px 0;
+        }
+        #btn_three a:hover{
+           color: rgb(205, 38, 83);
+        }
+        @media(max-width:1050px){
+            
+            .dunt_con{
+                width: 90%;
+                display: flex;
+               gap: 50px;
+                flex-direction: column;
+                padding: 120px 0 120px  0;
+            }
+            #img{
+                width: 200px;
+            }
+            #imgee{
+                width: 200px;
+            }
+            .dunt_title h2{
+                font-size: 50px;
+            }
+        }
+        .main_samosa{
+            width: 100%;
+            /* background-color: rgb(244, 109, 154); */
+            background-color: rgb(232, 203, 169);
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5px;
+            color: rgb(165, 7, 7);
+            /* color: rgb(167, 85, 45); */
+        }
+        .con_samosa{
+            width: 90%;
+            display: flex;
+            justify-content: space-around;
+            padding: 190px 0 100px  0;
+            text-align: center;
+        }
+        .title_samosa h2{
+            font-size: 40px;
+        }
+        .title_samosa {
+            padding-top: 20px;
+        }
+        .blank_somosa{
+            width: 30vw;
+            height: 2px;
+            background-color: white;
+            margin: auto;
+        }
+        #btn_four{
+            width: 40%;
+            background-color: transparent;
+            /* color: rgb(205, 38, 83); */
+            text-decoration: none;
+            font-size: 22px;
+            border: none;
+            text-align: center;
+            padding: 0px 0 50px 0;
+        }
+        #btn_four a:hover{
+           color: rgb(205, 38, 83);
+        }
+        #img_samosa{
+            width:400px;
+        }
+       @media(max-width:949px){
+        .con_samosa{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            padding: 160px 0 100px  0;
+            gap: 60px;
+        }
+        .title_samosa h2{
+            font-size: 60px;
+        }
+        .blank_somosa{
+            width: 90%;
+        }
+
+       }
+       @media(max-width:455px) {
+        
+        #img_samosa{
+            width:300px;
+         }
+       }
+       .main_pastry{
+        width: 100%;
+        /* background-color: rgb(244, 109, 154); */
+        background-color: rgb(234, 187, 180);
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5px;
+        color: rgb(165, 7, 7);
+        /* color: rgb(167, 85, 45); */
+    }
+    .con_pastry{
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 190px 0 100px  0;
+        text-align: center;
+    }
+       #img_pastry{
+        width:400px;
+        
+    }
+    .title_pastry h2{
+        font-size: 40px;
+        padding:20px 0 0 0 ;
+    
+    }
+    @media(max-width:1230px) {
+         .title_pastry h2{
+            font-size: 30px;
+        }}
+    @media(max-width:950px) {
+        
+        #img_pastry{
+            width:400px;
+         }
+         .title_pastry h2{
+            font-size: 40px;
+            font-weight: small;
+        
+        }
+        .con_pastry{
+            width: 90%;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+       }
+       @media(max-width:756px) {
+        
+        #img_pastry{
+            width:300px;
+         }
+         .title_pastry h2{
+            font-size: 30px;
+            font-weight: small;
+        
+        }
+    }
+    .main_n_p{
+        width: 100%;
+        background-color: rgb(241, 161, 128)n;
+        margin-top: 7px;
+    }
+    .con_n_p{
+        margin: auto;
+        background-color:rgb(246, 185, 157);
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+    }
+    .nimko{
+        width: 50%;
+        background-color: rgb(241, 161, 128);
+        text-align: center;
+        border-right: 5px solid;
+        border-color: white;
+
+    }
+    .nimko h1{
+        color: white;
+        font-size: 40px;
+    }
+    .imge_nimko{
+        text-align: center;
+        
+    }
+    #nimko_imge{
+        width: 400px;
+    }
+    #btn_five{
+        width: 40%;
+        background-color: transparent;
+        /* color: rgb(205, 38, 83); */
+        text-decoration: none;
+        font-size: 22px;
+        border: none;
+        text-align: center;
+        padding: 0px 0 50px 0;
+    }
+    #btn_five a:hover{
+       color: rgb(205, 38, 83);
+    }
+    .n_s_title h2{
+        font-size: 30px;
+        color: white;
+    }
+    .puff{
+        text-align: center;
+        margin: auto;
+        width: 50%;
+     
+    }
+    .puff h1{
+        color: white;
+        font-size: 40px;
+    }
+    .imge_puff{
+        text-align: center;
+    }
+   
+    #puff_imge{
+        width: 400px;
+    }
+    #btn_seven{
+        width: 40%;
+        background-color: transparent;
+        /* color: rgb(205, 38, 83); */
+        text-decoration: none;
+        font-size: 22px;
+        border: none;
+        text-align: center;
+        padding: 0px 0 50px 0;
+    }
+    #btn_seven a:hover{
+       color: rgb(205, 38, 83);
+    }
+    .p_s_title h2{
+        font-size: 30px;
+        color: white;
+    }
+    @media(max-width:826px){
+        .con_n_p{
+            display: flex;
+            flex-direction: column;
+        }
+        .puff{
+            width: 100%; 
+        }
+        .nimko{
+            width: 100%;
+        }
+    }
+    @media(max-width:426px){
+        #nimko_imge{
+            width: 300px;
+        }
+        #puff_imge{
+        padding-right: 10px;
+        }
+        .imge_puff{
+            padding-right: 10px;
+        }
+    }
+
+        
+</style>
+<body>
+    <div class="main">
+        <div class="con">
+            <div class="nav">
+                <div class="logo">
+                    
+                    TAHA SWEET
+                </div>
+                
+                    <div class="navbar">
+                        <a href="#cake">CAKES</a>
+                        <a href="#biscuit">BISCUIT</a>
+                        <a href="#pastry">PASTRY</a>
+                        <a href="#bread">BREAD</a>
+                        <a href="#pizza">PIZZA</a>
+                        <a href="#dunt">DONUT</a>
+                        <a href="#snack">SNACKS</a>
+                        <a href="#salad">SALAD</a>
+                        <a href="#puff">PUFF</a>
+                        <!-- <a href="">Delivery</a> -->
+                        
+                    </div>
+               <i class="fa-solid fa-bars" onclick="show()"></i>
+            </div>
+        </div>
+     
+    <div class="imge" id="cake">
+       <div class="mango_title">
+        <h1>FRASH MANGO CAKE</h1>
+        <h2>it`s a handmade masterpiece</h2>
+       </div>
+        <!-- <img src="/static/css/download (2).jpg" alt="Description of Image" width="700px"> -->
+    </div>
+    <div class="biscit">
+       <div class="b_title">
+        <h1>ROYAL BISCUIT
+            COLLECTION</h1>
+       </div>
+       <div class="blank">
+        
+       </div>
+       <div class="title_b">
+        <h2><p>Want to feel like a Royalty ?</p></h2>
+        <button id="btn"><a href="">Explore more</a></button>
+       </div>
+       <div class="main_bis" id="biscuit">
+        <div class="bis_one">
+            <div class="pista_biscuit">
+                <img id="ho" src="images/pista_biscuit-2.png" alt="">
+                <h3>PISTA KHATAI</h3>
+            </div>
+            <div class="jam_biscuit">
+                <img id="ho"  src="images/jam_biscuit.png" alt="">
+                <h3>JAM BISCUIT</h3>
+            </div>
+        </div>
+        
+        <div class="bis_two">
+            <div class="almond_biscuit">
+                <img id="ho" src="images/almond_ladoo_biscuit.png" alt="">
+                <h3>ALMOND BISCUIT</h3>
+            </div>
+            <div class="zeera_biscuit">
+                <img id="ho" src="images/zeera_biscuit-1.png" alt="">
+                <h3>ZEERA BISCUIT</h3>
+            </div>
+        </div>
+        
+       </div>
+       <div class="main_bis">
+        <div class="bis_one">
+            <div class="pista_biscuit">
+                <img id="ho" src="images/paraline_biscuit-1-2.png" alt="">
+                <h3>PISTA BISCUIT</h3>
+            </div>
+            <div class="jam_biscuit">
+                <img id="ho" src="images/black_currant_biscuit.png" alt="">
+                <h3>JAM BISCUIT</h3>
+            </div>
+        </div>
+        
+        <div class="bis_two">
+            <div class="almond_biscuit">
+                <img id="ho" src="images/walnut_biscuit-1-2.png" alt="">
+                <h3>WALNUT BISCUIT</h3>
+            </div>
+            <div class="zeera_biscuit">
+                <img id="ho" src="images/paraline_biscuit-1-2.png" alt="">
+                <h3>PISTA BISCUIT</h3>
+            </div>
+        </div>
+       </div>
+       </div>
+</div>
+        <div class="main_braed" id="bread">
+            <div class="bread_con">
+           <div class="bra_tit">
+            <h2>BREADS</h2>
+            <div class="blank_to">  </div> 
+            <h3>Classical baking tradition</h3>
+            <button id="btn_to"><a href="">Explore more</a></button>
+           </div> 
+           <div class="braed_img">
+            <img id="imge" src="images/bread_img.png" alt="" width="500px">
+           </div>
+        </div>
+        
+        </div>
+        <div class="main_dunt" id="dunt">
+            <div class="dunt_con">
+                <div class="img_dunt_one" id="hover"><img id="imgee" src="images/vanilla_marble_donut-1.png" alt=" "></div>
+           <div class="dunt_title">
+            <h2> DONUTS</h2>
+            <div class="blank_dunt">  </div> 
+            <h3>CHOCOLATE . VANILLA . STRAWBERRY</h3>
+            <button id="btn_three"><a href="">Explore more</a></button>
+           </div> 
+           <div class="img_dunt_two">
+            <img id="img" src="images/donut_img-1.png" alt="" >
+           </div>
+        </div>
+        
+        </div>
+       <div class="main_samosa" id="snack">
+        <div class="con_samosa">
+            <div class="title_samosa">
+                <h2> SNACKS</h2>
+                <div class="blank_somosa">  </div> 
+                <h3>Keep life simple and eat a snack.
+                    Oh, this samosa…</h3>
+                <button id="btn_four"><a href="">Explore more</a></button>
+               </div> 
+               <div class="img_samosa" >
+                <img id="img_samosa" src="images/snack_samosa (1).png" alt="" >
+               </div>
+        </div>
+       </div>
+
+       <div class="main_pastry" id="pastry">
+        <div class="con_pastry">
+            <div class="img_samosa">
+                <img id="img_pastry" src="images/Pastry (1).png" alt="" >
+               </div>
+            <div class="title_pastry">
+                <h2> CHOCOLATE CHERRY
+                    PASTRY</h2>
+                <div class="blank_somosa">  </div> 
+                <h3>Artisan style pastry</h3>
+                <button id="btn_four"><a href="">Explore more</a></button>
+               </div> 
+              
+        </div>
+       </div>
+       <!-- nimko and puff -->
+        <div class="main_n_p">
+            <div class="con_n_p">
+            <div class="nimko">
+                <h1>NIMKO</h1>
+                <div class="imge_nimko">
+                    <img id="nimko_imge" src="images/nimko.png" alt="">
+                </div>
+                <div class="n_s_title">
+                    <h2> Flattened, fried and seasoned with spices.</h2>
+                        <button id="btn_five"><a href="">Explore more</a></button>
+                </div>
+            </div>
+           
+            <div class="puff" id="puff">
+                <h1>PUFF</h1>
+                <div class="imge_puff">
+                    <img id="puff_imge" src="images/vegetable_pastry.png" alt="">
+                </div>
+               
+                <div class="p_s_title">
+                    <h2>Airy, fluffy, light and a hint of salt.</h2>
+                        <button id="btn_seven"><a href="">Explore more</a></button>
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+
+        <!-- salad and pizza -->
+        <div class="main_n_p">
+            <div class="con_n_p">
+            <div class="nimko" id="salad" >
+                <h1>SALAD</h1>
+                <div class="imge_nimko">
+                    <img id="nimko_imge" src="images/salad (1).png" alt="">
+                </div>
+                <div class="n_s_title">
+                    <h2>Fresh, fruits, corn, lettuce and alot of nutrients.</h2>
+                        <button id="btn_five"><a href="">Explore more</a></button>
+                </div>
+            </div>
+           
+            <div class="puff" id="pizza">
+                <h1>PIZZA</h1>
+                <div class="imge_puff">
+                    <img id="puff_imge" src="images/pizza (1).png" alt="">
+                </div>
+               
+                <div class="p_s_title">
+                    <h2> Flattened, fried and seasoned with spices.</h2>
+                        <button id="btn_seven"><a href="">Explore more</a></button>
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+
+
+
+
+    <script>
+        function show(){
+            let nav = document.querySelector(".navbar")
+            nav.classList.toggle("nav_menu")
+        }
+    </script>
+</body>
+</html>
